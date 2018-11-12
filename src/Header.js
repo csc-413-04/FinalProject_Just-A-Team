@@ -7,17 +7,20 @@ class Header extends Component {
     render() {
         return (
             <div className="header">
-                <h1> My App</ h1>
+                <h1 > Chat App </ h1>
                 <nav>
                     <ul>
                         <li>
                             <Link to="/">Home</Link>
                         </li>
                         <li>
-                            <Link to="/page1">Page1</Link>
+                            <Link to="/Chat">Chat</Link>
                         </li>
                         <li>
-                            <Link to="/page2/">Page2</Link>
+                            <Link to="/Photo/">Photo</Link>
+                        </li>
+                        <li>
+                            <Link to="/Friends/">Friends</Link>
                         </li>
                     </ul>
                 </nav>

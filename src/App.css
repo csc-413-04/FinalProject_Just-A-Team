@@ -44,7 +44,9 @@ html, body{
 
 .header h1{
   display: inline-block;
-  float:left;
+  float: left;
+  position: absolute;
+    left: 895px;
 }
 
 .header ul{
@@ -67,4 +69,35 @@ html, body{
 .page-content{
   width: 900px;
   margin: 0 auto;
+}
+
+#box{
+  width:770px;
+  height: 100px;
+}
+
+#box2{
+  width:770px;
+}
+
+#buffer{
+  width:125px;
+  height: 200px;
+  float: left;
+}
+
+#box_l{
+  width:300px;
+  height:80px;
+  font-size: 45px;
+  background:rgb(148, 148, 161);
+  float: left;
+}
+
+#box_r{
+  width:300px;
+  height:80px;
+  font-size: 45px;
+  background:rgb(148, 148, 161);
+  float: right;
 }
