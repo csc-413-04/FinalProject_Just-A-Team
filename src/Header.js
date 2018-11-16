@@ -22,6 +22,9 @@ class Header extends Component {
                         <li>
                             <Link to="/Friends/">Friends</Link>
                         </li>
+                        <li>
+                            <Link to="/Login/">Login</Link>
+                        </li>
                     </ul>
                 </nav>
             </div>

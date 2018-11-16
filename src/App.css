@@ -45,8 +45,6 @@ html, body{
 .header h1{
   display: inline-block;
   float: left;
-  position: absolute;
-    left: 895px;
 }
 
 .header ul{
@@ -72,12 +70,40 @@ html, body{
 }
 
 #box{
-  width:770px;
+  display: inline-block;
+  float: center;
+  width:650px;
   height: 100px;
 }
 
+#banner{
+  width: 900px;
+  height: 50px;
+  background: rgb(155, 107, 218);
+}
+
+#banner2{
+  width: 900px;
+  height: 50px;
+  background: rgb(107, 187, 218);
+}
+
+#banner3{
+  width: 900px;
+  height: 50px;
+  background: rgb(170, 218, 107);
+}
+
+#banner4{
+  width: 900px;
+  height: 50px;
+  background: rgb(231, 210, 114);
+}
+
 #box2{
-  width:770px;
+  display: inline-block;
+  float: center;
+  width:650px;
 }
 
 #buffer{
@@ -100,4 +126,19 @@ html, body{
   font-size: 45px;
   background:rgb(148, 148, 161);
   float: right;
+}
+
+#friendbox{
+  display: inline-block;
+  float:center;
+  width: 700px;
+  height: 300px;
+  border-style: solid;
+}
+
+#textbox{
+  margin-left: 100px;
+  width: 300px;
+  height: 30px;
+  border-style: inset;
 }

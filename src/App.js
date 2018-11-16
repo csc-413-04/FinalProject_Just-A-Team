@@ -8,6 +8,8 @@ import HomePage from './HomePage';
 import Chat from './Chat';
 import Photo from './Photo';
 import Friends from './Friends';
+import Login from './Login';
+import Signup from './Signup';
 import { Switch, BrowserRouter as Router, Route } from 'react-router-dom';
 
 class App extends Component {
@@ -50,6 +52,8 @@ class App extends Component {
               <Route path="/Chat" component={Chat} />
               <Route path="/Photo" component={Photo} />
               <Route path="/Friends" component={Friends} />
+              <Route path="/Login" component={Login} />
+              <Route path="/Signup" component={Signup} />
               <Route path="/" component={HomePage} />
             </Switch>
           </div>

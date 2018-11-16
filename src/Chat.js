@@ -6,7 +6,7 @@ class Chat extends Component {
     render() {
         return (
             <div onClick={this.props.doTest}>
-                <h1>Chat</h1>
+                <h1 id="banner3">Chat</h1>
                 <p>
                     Here is content for chat!
                 </p>
