@@ -47,6 +47,7 @@ class App extends Component {
           <Header banner={this.state.banner} />
           <div className="page-content">
             <Switch>
+              <Route path=“/login” component={Login} />
               <Route path="/page2" exact component={Page2} />
               <Route path="/page1/mail" component={Mail} />
               <Route path="/page1" component={Page1} />
