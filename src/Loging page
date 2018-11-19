@@ -1,106 +1,78 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
 import { connect } from 'react-redux';
-import { doTest } from './redux/actions';
-import Header from './Header';
+import { Link } from 'react-router-dom';
 
-<!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {font-family: Arial, Helvetica, sans-serif;}
-form {border: 3px solid #f1f1f1;}
 
-input[type=text], input[type=password] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-}
 
-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-}
+class Login extends Component {
+    constructor() {
+        super();
 
-button:hover {
-    opacity: 0.8;
-}
+        this.state = {
+            username: '',
+            password: '',
+            name: '',
+            hasAgreed: false
+        };
 
-.cancelbtn {
-    width: auto;
-    padding: 10px 18px;
-    background-color: #f44336;
-}
-
-.imgcontainer {
-    text-align: center;
-    margin: 24px 0 12px 0;
-}
-
-img.avatar {
-    width: 40%;
-    border-radius: 50%;
-}
-
-.container {
-    padding: 16px;
-}
-
-span.psw {
-    float: right;
-    padding-top: 16px;
-}
-
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-    span.psw {
-       display: block;
-       float: none;
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
-    .cancelbtn {
-       width: 100%;
+
+    handleChange(e) {
+        let target = e.target;
+        let value = target.type === 'checkbox' ? target.checked : target.value;
+        let name = target.name;
+
+        this.setState({
+          [name]: value
+        });
+    }
+
+    handleSubmit(e) {
+        e.preventDefault();
+
+        console.log('The form was submitted with the following data:');
+        console.log(this.state);
+    }
+
+    render() {
+        return (
+            <div onClick={this.props.doTest}>
+                <h1 id="banner2">Login</h1>
+                <form onSubmit={this.handleSubmit} className="FormFields">
+              <div className="FormField">
+                <label className="FormField__Label" htmlFor="name">Username</label>
+                <input type="text" id="name" className="FormField__Input" placeholder="Enter your username" name="name" value={this.state.name} onChange={this.handleChange} />
+              </div>
+              <div className="FormField">
+                <label className="FormField__Label" htmlFor="password">Password</label>
+                <input type="password" id="password" className="FormField__Input" placeholder="Enter your password" name="password" value={this.state.password} onChange={this.handleChange} />
+              </div>
+
+              <div className="FormField">
+                <label className="FormField__CheckboxLabel">
+                    <input className="FormField__Checkbox" type="checkbox" name="hasAgreed" value={this.state.hasAgreed} onChange={this.handleChange} /> I am not a robot
+                </label>
+              </div>
+
+              <div className="FormField">
+                  <button className="FormField__Button mr-20">Login</button> <Link to="/Signup/">Sign up</Link>
+              </div>
+            </form>
+            </div>
+        );
     }
 }
-</style>
-</head>
-<body>
 
-<h2>Login Form</h2>
+const mapStateToProps = (state, ownProps) => {
+    return {
+    };
+};
 
-<form action="/action_page.php">
-  <div class="imgcontainer">
-    <img src="img_avatar2.png" alt="Avatar" class="avatar">
-  </div>
+const mapDispatchToProps = {};
 
-  <div class="container">
-    <label for="uname"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="uname" required>
-
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
-        
-    <button type="submit">Login</button>
-    <label>
-      <input type="checkbox" checked="checked" name="remember"> Remember me
-    </label>
-  </div>
-
-  <div class="container" style="background-color:#f1f1f1">
-    <button type="button" class="cancelbtn">Cancel</button>
-    <span class="psw">Forgot <a href="#">password?</a></span>
-  </div>
-</form>
-
-</body>
-</html>
-
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(Login);
