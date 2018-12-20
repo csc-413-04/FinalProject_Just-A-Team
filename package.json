@@ -1,29 +1,24 @@
 {
-  "name": "413-react-demo",
-  "version": "0.1.0",
+  "name": "chat",
+  "version": "0.0.0",
   "private": true,
-  "dependencies": {
-    "@material-ui/core": "^3.3.2",
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2",
-    "react-redux": "^5.0.7",
-    "react-router-dom": "^4.3.1",
-    "react-scripts": "2.0.5",
-    "redux": "^4.0.1"
-  },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "node ./bin/www"
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+  "dependencies": {
+    "bcrypt": "^0.8.5",
+    "body-parser": "^1.17.1",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.3",
+    "express": "^4.15.2",
+    "jade": "~1.11.0",
+    "jsonwebtoken": "^7.4.0",
+    "jwt-simple": "^0.3.1",
+    "mongoose": "^4.9.7",
+    "morgan": "^1.8.1",
+    "passport": "^0.3.0",
+    "passport-jwt": "^1.2.1",
+    "serve-favicon": "~2.4.2",
+    "socket.io": "1.7.3"
+  }
 }
