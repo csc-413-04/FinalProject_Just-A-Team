@@ -1,0 +1,274 @@
+html, body, #root, .App{
+  width:100%;
+  height:100%;
+  margin:0;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.header {
+  background: #eaeaea;
+  height: 80px;
+}
+
+.header h1{
+  display: inline-block;
+  float:left;
+  text-align: center;
+}
+
+.header ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  float: right;
+}
+
+.header li{
+  display: inline-block;
+  list-style-type: none;
+
+  float: left;
+}
+
+.header li a{
+  line-height: 80px;
+  padding: 0 10px;
+  display: inline-block;
+
+  display: block;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+
+.header li a:hover:not(.active) {
+  background-color: #4CAF50;
+}
+
+.header .active {
+  background-color: #4CAF50;
+}
+
+.page-content{
+  width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  height: 70%;
+}
+
+/*Messages*/
+.messages{
+  overflow-y: scroll;
+  flex-grow: 2;
+  border: 2px solid #dedede;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.message{
+  margin-bottom: 10px;
+  background: white;
+  border-radius: 3px;
+  text-align: left;
+  padding:10px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+  border-radius: 5px;
+}
+
+.content-area{
+  height:100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.messages img {
+  float: left;
+  max-width: 60px;
+  width: 100%;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+.content-area .message-addon{
+  margin-top: 16px;
+}
+
+.content-area .message-addon input{
+  float: left;
+  width: 80%;
+  padding: 12px;
+}
+.content-area .message-addon button{
+  float: right;
+  width: 18%;
+  border-radius: 5px;
+  margin: 0px;
+}
+
+/* Create three unequal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 10px;
+}
+
+/* Left and right column */
+.column.side {
+  width: 20%;
+}
+
+/* Middle column */
+.column.middle {
+  width: 60%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*Card*/
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 100%;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container-card {
+  padding: 2px 16px;
+}
+
+.friendlist{
+  margin-top: 16px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 100%;
+}
+.container-friendlist{
+  padding: 2px 16px;
+}
+.friendlist h5{
+  color: #4CAF50;
+}
+
+.conversation{
+  margin-top: 16px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 100%;
+}
+.container-conversation{
+  padding: 2px 16px;
+}
+.conversation h5{
+  color: #4CAF50;
+}
+
+
+
+
+
+
+/*Login*/
+form {border: 3px solid #f1f1f1;}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+img.avatar {
+  width: 20%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
